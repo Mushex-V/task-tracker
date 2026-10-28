@@ -6,8 +6,69 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Task Tracker</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
+    <header class="container">
+        <h1>Task Tracker</h1>
+        <nav>
+            <a href="https://github.com/Mushex-V" target="_blank">GitHub</a>
+            <a href="https://t.me/Mushex_V" target="_blank">Telegram</a>
+            <a href="mailto:mushexv0@gmail.com" target="_blank">Mail</a>
+            <a href="tel:+374535717" target="_blank">Phone</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <form class="task-form" id="task-form">
+            <div class="task-form-group">
+                <input type="text" class="task-form-input"
+                       id="task-input" placeholder="Add a new task..."
+                       autocomplete="off" required
+                       aria-label="New task input">
+                <select class="task-form-select" id="priority-select" aria-label="Task priority">
+                    <option value="high">High Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="low">Low Priority</option>
+                </select>
+                <button type="submit" class="task-form-button">Add task</button>
+            </div>
+            <span class="task-form-error" id="input-error"></span>
+        </form>
+
+        <section>
+            <div class="controls-status-filters">
+                <button class="controls-filter-btn controls_filter-btn-active" data-filter="all">All</button>
+                <button class="controls-filter-btn" data-filter="active">Active</button>
+                <button class="controls-filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <div class="controls-priority-filters">
+                <select class="controls-select" id="filter-priority-select" aria-label="Filter by priority">
+                    <option value="all">All Priorities</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+        </section>
+
+        <div class="task-container">
+            <ul class="task-list" id="task-list">
+
+            </ul>
+            <p class="task-container-empty" id="empty-message">
+                No tasks found. Add a new task to get started!
+            </p>
+        </div>
+
+    </main>
+
+    <footer class="container">
+        <p class="footer-text">© 2026 Mushex-V. All rights reserved.</p>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
