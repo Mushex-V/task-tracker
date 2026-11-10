@@ -7,11 +7,11 @@ A minimalist web application for managing daily tasks efficiently.
 - **SCSS** (Variables, nesting, BEM methodology)
 - **JavaScript (ES6+)** (DOM manipulation, LocalStorage, array methods)
 
-## 📌 Features (In Progress)
-- [ ] Add, edit, and delete tasks
-- [ ] Filter tasks by status and priority
-- [ ] Persistent data storage with LocalStorage
-- [ ] Input validation and empty task protection
+## 📌 Features
+- [x] Add, edit, and delete tasks
+- [x] Filter tasks by status and priority
+- [x] Persistent data storage with LocalStorage
+- [x] Input validation and empty task protection
 
 ## 🚀 Status
 Currently in active development.
