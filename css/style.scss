@@ -216,3 +216,93 @@ section {
         padding: 20px 0;
     }
 }
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    transition: all $transition-speed;
+
+    &:hover {
+        border-color: $text-secondary;
+    }
+
+    &.completed {
+        opacity: 0.6;
+
+        .task-text {
+            text-decoration: line-through;
+            color: $text-secondary;
+        }
+    }
+}
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: $accent-color;
+    cursor: pointer;
+}
+
+.task-text {
+    font-size: 0.95rem;
+    color: $text-primary;
+    word-break: break-word;
+    flex: 1;
+    transition: color $transition-speed;
+}
+
+.task-badge {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &.high {
+        background-color: rgba(239, 68, 68, 0.15);
+        color: $priority-high; // Используем переменную, если она есть в _variables
+        border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    &.medium {
+        background-color: rgba(245, 158, 11, 0.15);
+        color: $priority-medium; // Исправлен цвет на правильную переменную
+        border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    &.low {
+        background-color: rgba(16, 185, 129, 0.15);
+        color: $priority-low; // Используем переменную для низкого приоритета
+        border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+}
+
+.task-delete-btn {
+    background: transparent;
+    border: none;
+    color: $text-secondary;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0 6px;
+    border-radius: 4px;
+    transition: color $transition-speed, background-color $transition-speed;
+
+    &:hover {
+        color: #ef4444;
+        background-color: rgba(239, 68, 68, 0.1);
+    }
+}
