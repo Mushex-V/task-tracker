@@ -12,6 +12,3 @@ A minimalist web application for managing daily tasks efficiently.
 - [x] Filter tasks by status and priority
 - [x] Persistent data storage with LocalStorage
 - [x] Input validation and empty task protection
-
-## 🚀 Status
-Currently in active development.
